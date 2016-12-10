@@ -1,0 +1,37 @@
+{
+    "name": "JQuerySnowfall",
+    "version": "1.0",
+    "author": "[https://www.mediawiki.org/wiki/User:NikusPokus Nikus Pokus]",
+    "license-name": "AGPL-3.0",
+    "url": "https://www.mediawiki.org/wiki/Extension:JQuerySnowfall",
+    "description": "An extension for the [https://github.com/loktar00/JQuery-Snowfall Snowfall jquery plugin]",
+    "type": "other",
+    "require": {
+        "MediaWiki": ">= 1.27"
+    },
+    "Hooks": {
+        "BeforePageDisplay": [
+            "JQuerySnowfall::onBeforePageDisplay"
+        ]
+    },
+    "AutoloadClasses": {
+        "JQuerySnowfall": "JQuerySnowfall.class.php"
+    },
+    "ResourceModules": {
+        "ext.JQuerySnowfall": {
+            "scripts": [
+                "JQuery-Snowfall/snowfall.jquery.js",
+                "init.js"
+            ],
+            "styles": "JQuery-Snowfall/styles.css" 
+        }
+    },
+    "ResourceFileModulePaths": {
+        "localBasePath": ""
+    },
+    "config": {
+        "configElement1": "valeur",
+        "configElement2": false
+    },
+    "manifest_version": 1
+}
